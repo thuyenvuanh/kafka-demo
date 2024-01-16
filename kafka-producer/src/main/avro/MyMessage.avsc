@@ -1,0 +1,12 @@
+{
+  "name": "MyMessage",
+  "namespace": "com.noelvu.kafkaproducer.model",
+  "type": "record",
+  "fields": [
+    {
+      "name": "content",
+      "type": "string",
+      "doc": "Any message you want to send to topic"
+    }
+  ]
+}

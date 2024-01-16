@@ -1,0 +1,19 @@
+server:
+  servlet:
+    context-path: /kafkaproducer
+  port: 8889
+
+spring:
+  kafka:
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+      properties:
+        schema.registry.url: http://localhost:8081
+        allow.auto.create.topics: false
+      bootstrap-servers: http://localhost:9096
+
+kafka:
+  topics:
+    myTopic:
+      name: myTopic

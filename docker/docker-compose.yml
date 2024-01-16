@@ -65,7 +65,7 @@ services:
     container_name: kafka-create-topics
     command: " bash -c 'echo Waiting for Kafka to be ready... && \
       cub kafka-ready -b broker1:29096 1 20 && \
-      kafka-topics --create --topic test --if-not-exists --bootstrap-server broker1:29096 --partitions 1 --replication-factor 1 && \
+      kafka-topics --create --topic myTopic --if-not-exists --bootstrap-server broker1:29096 --partitions 1 --replication-factor 1 && \
       sleep infinity
       '"
     environment:
